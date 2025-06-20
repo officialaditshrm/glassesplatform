@@ -25,13 +25,7 @@ const App = () => {
   return (
     <Router>
       <div className="font-sans min-h-screen bg-gray-100">
-        {/* Navbar */}
         <Header setShowSignUp = {setShowSignUp}/>
-        <nav className="flex justify-between items-center bg-white px-6 py-4 shadow-md">
-          <h1 className="text-xl font-bold text-blue-700">V-Lens</h1>
-          <div className="space-x-4">
-          </div>
-        </nav>
 
         {/* Routes */}
         <Routes>
@@ -51,7 +45,6 @@ const App = () => {
           <SignUp
             onClose={() => setShowSignUp(false)}
             onSwitch={handleSwitchToSignIn}
-            setShowSignIn = {setShowSignIn}
           />
         )}
       </div>

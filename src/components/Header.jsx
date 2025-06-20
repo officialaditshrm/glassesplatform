@@ -49,8 +49,8 @@ function Header ({setShowSignUp}){
             <div id = "topheader">
                 <div id = "topheader2">
                 {toplinks.map((link, index) => {
-                    return <div className = "toplink">
-                        <Link to = {link.url} key = {index} className = "toplinktext">
+                    return <div key = {index} className = "toplink">
+                        <Link to = {link.url} className = "toplinktext">
                             {link.name}
                         </Link>
                         {toplinks[index+1] && "|"}
@@ -71,7 +71,7 @@ function Header ({setShowSignUp}){
                 </div>
                 <div id = "middlerightheader">
                     <Link to = "/">Track Order</Link>
-                    <Button onClick = {() => setShowSignUp(true)}>Sign In & Sign Up</Button>
+                    <button className = "mrhbutton" onClick = {() => setShowSignUp(true)}>Sign In & Sign Up</button>
                     <Link to = "/wishlist">Wishlist</Link>
                     <Link to = "/">Cart</Link>
                 </div>
