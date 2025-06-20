@@ -43,7 +43,7 @@ const toplinks = [
 
 
 
-function Header (){ 
+function Header ({setShowSignUp}){ 
     return (
         <div id = "header">
             <div id = "topheader">
@@ -71,7 +71,7 @@ function Header (){
                 </div>
                 <div id = "middlerightheader">
                     <Link to = "/">Track Order</Link>
-                    <Link to = "/">Sign In & Sign Up</Link>
+                    <Button onClick = {() => setShowSignUp(true)}>Sign In & Sign Up</Button>
                     <Link to = "/wishlist">Wishlist</Link>
                     <Link to = "/">Cart</Link>
                 </div>

@@ -26,22 +26,10 @@ const App = () => {
     <Router>
       <div className="font-sans min-h-screen bg-gray-100">
         {/* Navbar */}
-        <Header />
+        <Header setShowSignUp = {setShowSignUp}/>
         <nav className="flex justify-between items-center bg-white px-6 py-4 shadow-md">
           <h1 className="text-xl font-bold text-blue-700">V-Lens</h1>
           <div className="space-x-4">
-            <button
-              onClick={() => setShowSignIn(true)}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-            >
-              Sign In
-            </button>
-            <button
-              onClick={() => setShowSignUp(true)}
-              className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
-            >
-              Sign Up
-            </button>
           </div>
         </nav>
 
@@ -63,6 +51,7 @@ const App = () => {
           <SignUp
             onClose={() => setShowSignUp(false)}
             onSwitch={handleSwitchToSignIn}
+            setShowSignIn = {setShowSignIn}
           />
         )}
       </div>
