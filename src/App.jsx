@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-import Wishlist from './components/Wishlist';
-import Cart from './components/Cart';
-import SliderAnimation from './components/SliderAnimation.jsx';
-import SignIn from './components/Signin.jsx';
-import SignUp from './components/Signup.jsx';
+import Wishlist from "./components/Wishlist";
+import Cart from "./components/Cart";
+import SliderAnimation from "./components/SliderAnimation.jsx";
+import SignIn from "./components/Signin.jsx";
+import SignUp from "./components/Signup.jsx";
+import ChatBot from "./components/ChatBot";
 
 const App = () => {
   const [showSignIn, setShowSignIn] = useState(false);
@@ -28,8 +29,12 @@ const App = () => {
         <nav className="flex justify-between items-center bg-white px-6 py-4 shadow-md">
           <h1 className="text-xl font-bold text-blue-700">V-Lens</h1>
           <div className="space-x-4">
-            <Link to="/wishlist" className="text-blue-600 hover:underline">Wishlist</Link>
-            <Link to="/cart" className="text-blue-600 hover:underline">Cart</Link>
+            <Link to="/wishlist" className="text-blue-600 hover:underline">
+              Wishlist
+            </Link>
+            <Link to="/cart" className="text-blue-600 hover:underline">
+              Cart
+            </Link>
             <button
               onClick={() => setShowSignIn(true)}
               className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
@@ -65,6 +70,9 @@ const App = () => {
             onSwitch={handleSwitchToSignIn}
           />
         )}
+      </div>
+      <div>
+        <ChatBot />
       </div>
     </Router>
   );
