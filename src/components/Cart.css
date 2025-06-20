@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
 }
-
+ 
 .cart-container {
   display: flex;
   justify-content: center;
@@ -16,7 +16,6 @@ body {
 
 .cart-section {
   flex: 2;
-  background: #fbf9f7;
   padding: 1.5rem;
   border-radius: 8px;
 }
@@ -24,6 +23,7 @@ body {
 .cart-item-number{
   font-family: Lora;
   font-weight: 500;
+  font-size: 24px;
 }
 
 /* cart item section  */
@@ -120,6 +120,7 @@ body {
 .bill-details-heading{
   font-family: Lora;
   font-weight: 500;
+  font-size: 24px;
 }
 
 .cart-summary {

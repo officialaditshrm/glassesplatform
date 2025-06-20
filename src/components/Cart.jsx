@@ -89,7 +89,9 @@ const WishlistItem = ({ image, title, price, originalPrice, tag }) => (
 const WishlistSection = () => (
   <div className="wishlist-section">
     <div className="wishlist-top">
-      <h3 className='MerriweatherSans500'>Add items from your wishlist</h3>
+<h3 className='MerriweatherSans500' style={{ fontSize: "24px" }}>
+  Add items from your wishlist
+</h3>
       <div className="wishlist-nav">
         <button><WestIcon/></button>
         <button><EastIcon/></button>
