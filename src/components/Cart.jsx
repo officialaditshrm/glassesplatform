@@ -1,5 +1,8 @@
 import React from 'react';
 import './Cart.css';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import EastIcon from '@mui/icons-material/East';
+import WestIcon from '@mui/icons-material/West';
 
 const CartItem = ({ image, property1, property2, price1, price2, notice, finalPrice }) => (
   <div className="cart-item">
@@ -26,11 +29,9 @@ const CartItem = ({ image, property1, property2, price1, price2, notice, finalPr
   </div>
 );
 
-
-
 const CartSummary = () => (
   <div className="cart-summary">
-    <h3>Bill Details</h3>
+    <h3 className="bill-details-heading">Bill Details</h3>
     <div className="bill-details">
       <div className="bill-row"><span>Total item price</span><span>₹7000</span></div>
       <div className="bill-row"><span>Total discount</span><span className="discount">-₹333</span></div>
@@ -41,32 +42,32 @@ const CartSummary = () => (
 
     {/* Gold Membership */}
     <div className="gold-membership">
-      <strong>Add Gold Max Membership and</strong>
-      <p>Avail Buy 1 Get 1 Free + 10% Cashback</p>
-      <button className="gold-btn">
-        Add Gold <span className="arrow">→</span>
+      <strong className='MerriweatherSans500'>Add Gold Max Membership and</strong>
+      <p className='MerriweatherSans300'>Avail Buy 1 Get 1 Free + 10% Cashback</p>
+      <button className="gold-btn MerriweatherSans300">
+        Add Gold <span className="arrow"><EastIcon fontSize="small"/></span>
       </button>
     </div>
 
     {/* Welcome Coupon */}
     <div className="welcome-box">
       <div>
-        <strong>WELCOME applied</strong>
-        <p>You are saving ₹333</p>
+        <strong className='MerriweatherSans500'>WELCOME applied</strong>
+        <p className='MerriweatherSans300'>You are saving ₹333</p>
       </div>
-      <button className="remove-btn">REMOVE</button>
+      <button className="remove-btn MerriweatherSans500">REMOVE</button>
     </div>
 
     {/* Insurance Box */}
     <div className="insurance-box">
       <div>
-        <strong>Apply Insurance</strong>
-        <p>Tap to view your benefits</p>
+        <strong className='MerriweatherSans500'>Apply Insurance</strong>
+        <p className='MerriweatherSans300'>Tap to view your benefits</p>
       </div>
-      <button className="arrow-btn">→</button>
+      <button className="arrow-btn"><EastIcon fontSize="small"/></button>
     </div>
 
-    <button className="checkout-btn">Proceed To Checkout</button>
+    <button className="checkout-btn MerriweatherSans500">Proceed To Checkout <KeyboardArrowRightIcon /> </button>
   </div>
 );
 
@@ -75,12 +76,12 @@ const WishlistItem = ({ image, title, price, originalPrice, tag }) => (
   <div className="wishlist-item">
     <img src={image} alt="Wishlist Glasses" />
     <div className="wishlist-item-details">
-      <div className="wishlist-Title">{title}</div>
-      <div className="wishlist-price">
+      <div className="wishlist-Title MerriweatherSans500">{title}</div>
+      <div className="wishlist-price MerriweatherSans300">
         ₹{price}{" "}
-        {originalPrice && <span className="original-price">₹{originalPrice}</span>}
+        {originalPrice && <span className="original-price MerriweatherSans300">₹{originalPrice}</span>}
       </div>
-      {tag && <span className="tag">{tag}</span>}
+      {tag && <span className="tag MerriweatherSans300">{tag}</span>}
     </div>
   </div>
 );
@@ -88,10 +89,10 @@ const WishlistItem = ({ image, title, price, originalPrice, tag }) => (
 const WishlistSection = () => (
   <div className="wishlist-section">
     <div className="wishlist-top">
-      <h3>Add items from your wishlist</h3>
+      <h3 className='MerriweatherSans500'>Add items from your wishlist</h3>
       <div className="wishlist-nav">
-        <button>&larr;</button>
-        <button>&rarr;</button>
+        <button><WestIcon/></button>
+        <button><EastIcon/></button>
       </div>
     </div>
     <div className="wishlist-items">
@@ -121,7 +122,7 @@ const CartPage = () => {
   return (
     <div className="cart-container">
       <div className="cart-section">
-        <h2>Cart (2 items)</h2>
+        <h2 className="cart-item-number">Cart (2 items)</h2>
         <CartItem
           image="https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/628x301/9df78eab33525d08d6e5fb8d27136e95//l/i/peyush-bansal-shark-tank-electric-green-full-rim-wayfarer_csvfile-1706676595673-217431_(1).jpg"
           property1="Electric Green Full Rim Square Lenskart HUSTLR LAE5147-WC4 Eyeglasses"

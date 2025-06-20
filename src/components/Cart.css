@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 body {
-  background: #fdfaf6;
+  background: #fbf9f7;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -14,16 +16,31 @@ body {
 
 .cart-section {
   flex: 2;
-  background: white;
+  background: #fbf9f7;
   padding: 1.5rem;
   border-radius: 8px;
 }
 
+.cart-item-number{
+  font-family: Lora;
+  font-weight: 500;
+}
+
+/* cart item section  */
 .cart-item {
   display: flex;
   gap: 1.5rem;
   border-bottom: 1px solid #ddd;
-  padding: 1.5rem 0;
+  padding: 1.5rem 1rem;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 8px;
+  
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.15), /* top shadow */
+            -1px 0 3px rgba(0, 0, 0, 0.15),  /* left shadow */
+            1px 0 3px rgba(0, 0, 0, 0.15);
+
+
 }
 
 .cart-item img {
@@ -38,6 +55,18 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.text{
+  font-family: Merriweather Sans;
+  font-weight: 300;
+}
+
+.price{
+  font-family: Merriweather Sans;
+  font-weight: 300;
+}
+
+
 
 .line {
   display: flex;
@@ -63,56 +92,98 @@ body {
   color: #000;
 }
 
+.final-label{
+  font-family: Merriweather Sans;
+  font-weight: 500;
+}
+
+.final-price{
+  font-family: Merriweather Sans;
+  font-weight: 500;
+}
+
 .cart-actions {
   font-size: 14px;
   margin-top: 0.5rem;
 }
 
 .cart-actions a {
-  color: #0033a0;
-  text-decoration: none;
+  color: #000000;
+  text-decoration: underline;
   font-weight: 500;
   margin: 0 4px;
+  font-family: Merriweather Sans;
+  font-weight: 300;
 }
 
+/* Billing Details */
+.bill-details-heading{
+  font-family: Lora;
+  font-weight: 500;
+}
 
 .cart-summary {
   flex: 1;
-  background: white;
+  
   padding: 1.5rem;
   border-radius: 8px;
-  border-left: 1px solid #ddd;
 }
 
 .bill-details {
+  background-color: white;
   font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 7px;box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.15), /* top shadow */
+            -1px 0 3px rgba(0, 0, 0, 0.15),  /* left shadow */
+            1px 0 3px rgba(0, 0, 0, 0.15);   /* right shadow */
+
 }
 
 .bill-row {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 0;
+  font-family: Merriweather Sans;
+  font-weight: 300;
 }
 
 .bill-row.total {
   font-weight: bold;
   margin-top: 1rem;
+  font-family: Merriweather Sans;
+  font-weight: 500;
 }
 
 .discount {
   color: green;
 }
 
+.MerriweatherSans500{
+  font-family: Merriweather Sans;
+  font-weight: 500;
+}
+
+.MerriweatherSans300{
+  font-family: Merriweather Sans;
+  font-weight: 300;
+}
+
+
 .checkout-btn {
   margin-top: 1rem;
-  background-color: #00c389;
-  color: white;
+  background-color: #11daac;
+  color: #052a53;
   border: none;
   padding: 0.75rem 1.5rem;
   width: 100%;
-  font-weight: bold;
   cursor: pointer;
   border-radius: 4px;
+  font-size: 14px;
+  line-height: 26px;
+  border-radius: 50px;
 }
 
 /* Wishlist Section */
@@ -159,7 +230,6 @@ body {
 
 .wishlist-Title {
   font-size: 14px;
-  font-weight: bold;
   margin-bottom: 0.25rem;
   color: #1a1a1a;
 }
@@ -185,11 +255,14 @@ body {
 }
 
 .gold-membership {
-  background: #fff1d6;
-  border: 1px solid #f7d494;
+  background: #ffefce;
+  border: 1px solid #fac666;
   padding: 1rem;
   border-radius: 8px;
   margin-top: 1rem;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.15), /* top shadow */
+            -1px 0 3px rgba(0, 0, 0, 0.15),  /* left shadow */
+            1px 0 3px rgba(0, 0, 0, 0.15);
 }
 
 .gold-membership p {
@@ -214,13 +287,16 @@ body {
 }
 
 .welcome-box {
-  background: #f7f7f7;
+  background: white;
   border-radius: 8px;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 1rem;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.15), /* top shadow */
+            -1px 0 3px rgba(0, 0, 0, 0.15),  /* left shadow */
+            1px 0 3px rgba(0, 0, 0, 0.15);
 }
 
 .welcome-box p {
@@ -237,13 +313,15 @@ body {
 }
 
 .insurance-box {
-  background: #f7f7f7;
+  background: white;
   border-radius: 8px;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 1rem;box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.15), /* top shadow */
+            -1px 0 3px rgba(0, 0, 0, 0.15),  /* left shadow */
+            1px 0 3px rgba(0, 0, 0, 0.15);
 }
 
 .insurance-box p {
@@ -255,7 +333,7 @@ body {
   background: white;
   border: 1px solid #ccc;
   border-radius: 50%;
-  padding: 0.25rem 0.6rem;
+  padding: 0.1rem 0.6rem;
   font-weight: bold;
   cursor: pointer;
 }
