@@ -73,6 +73,7 @@ html, body {
 .wishlist-products{
         
         font-weight: 600;
+        background-color: white;
 }
 
 .wishlist-product-item{
