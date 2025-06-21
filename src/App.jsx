@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
 import Wishlist from './components/Wishlist';
 import Cart from './components/Cart';
 import SliderAnimation from './components/SliderAnimation.jsx';
@@ -8,6 +9,7 @@ import SignUp from './components/Signup.jsx';
 import Header from './components/Header.jsx';
 import TrackOrder from './components/TrackOrder';
 import FooterSection from './components/FooterSection';
+import ChatBot from './components/ChatBot';
 
 const App = () => {
   const [showSignIn, setShowSignIn] = useState(false);
@@ -95,6 +97,9 @@ const App = () => {
             onSwitch={handleSwitchToSignIn} 
           />
         )}
+      </div>
+      <div>
+        <ChatBot />
       </div>
     </Router>
   );
