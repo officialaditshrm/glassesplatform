@@ -38,7 +38,7 @@ const App = () => {
           <Route path="/Cart" element={<Cart />} />
           <Route path="/TrackOrder" element={<TrackOrder />} />
         </Routes>
-        <SliderAnimation/>
+        
         {/* Footer */}
         <FooterSection />
 
