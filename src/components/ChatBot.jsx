@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef} from "react";
 import "./ChatBot.css";
 import arrow from "../assets/ChatBot_pics/image.png";
 import chaticon from "../assets/ChatBot_pics/chat.png";
@@ -27,6 +27,19 @@ function ChatBot() {
     "Locate Nearby Store",
     "Query about my order",
   ];
+
+  const chatPopupRef = useRef(null);
+  useEffect(() => {
+  function handleClickOutside(event) {
+    if (isOpen && chatPopupRef.current && !chatPopupRef.current.contains(event.target)) {
+      setIsOpen(false); // close chat
+      setStartNewConversation(false); // reset conversation state
+    }
+  }
+
+  document.addEventListener("mousedown", handleClickOutside);
+}, [isOpen]);
+
   // const [conversationsList, setConverstaionsList] = useState([      //to show history in front of chatwindow  when it is opened
   //   {
   //     id: "1234",
@@ -292,7 +305,7 @@ function ChatBot() {
   return (
     <>
       <div className="chatWrapper">
-        <div className={`chatPopup ${isOpen ? "open" : ""}`}>
+       <div className={`chatPopup ${isOpen ? "open" : ""}`} ref={chatPopupRef}>
           {isOpen && !startNewConversation && chatPopUpHeader()}
           {isOpen && !startNewConversation && floatingNewConversationCard()}
           {isOpen && startNewConversation && newChatHeader()}
